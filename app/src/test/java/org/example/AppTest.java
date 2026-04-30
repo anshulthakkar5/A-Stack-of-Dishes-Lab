@@ -13,7 +13,7 @@ class AppTest {
 
     @Test
     void testPushAndSize() {
-        App.DishStack stack = new App.DishStack(2);
+        DishStack stack = new DishStack(2);
 
         stack.push(new Dish("Pizza"));
         stack.push(new Dish("Burger"));
@@ -23,7 +23,7 @@ class AppTest {
 
     @Test
     void testPop() {
-        App.DishStack stack = new App.DishStack(2);
+        DishStack stack = new DishStack(2);
 
         stack.push(new Dish("Pizza"));
         stack.push(new Dish("Burger"));
@@ -36,7 +36,7 @@ class AppTest {
 
     @Test
     void testPeek() {
-        App.DishStack stack = new App.DishStack(2);
+        DishStack stack = new DishStack(2);
 
         stack.push(new Dish("Pizza"));
         stack.push(new Dish("Burger"));
@@ -44,12 +44,12 @@ class AppTest {
         Dish top = stack.peek();
 
         assertEquals("Burger", top.description);
-        assertEquals(2, stack.size()); // peek does not remove
+        assertEquals(2, stack.size());
     }
 
     @Test
     void testStackFull() {
-        App.DishStack stack = new App.DishStack(1);
+        DishStack stack = new DishStack(1);
 
         stack.push(new Dish("Pizza"));
         stack.push(new Dish("Burger")); // should not be added
@@ -59,7 +59,7 @@ class AppTest {
 
     @Test
     void testEmptyStack() {
-        App.DishStack stack = new App.DishStack(2);
+        DishStack stack = new DishStack(2);
 
         assertNull(stack.pop());
         assertNull(stack.peek());
